@@ -1,0 +1,25 @@
+{
+  "name": "iris-site",
+  "version": "1.0.0",
+  "description": "Iris Emmett – Remote Ops & Compliance Specialist Site",
+  "author": "Iris Emmett",
+  "private": true,
+  "homepage": "https://emmetti.github.io/iris-portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^6.0.0",
+    "tailwindcss": "^3.4.1",
+    "vite": "^4.4.9"
+  }
+}
