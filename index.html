@@ -81,9 +81,24 @@
     .fade-in {
       animation: fadeIn 1s ease-in;
     }
+    .thank-you-message {
+      display: none;
+      font-size: 1.1rem;
+      text-align: center;
+      margin-top: 1rem;
+      animation: fadeOut 1.8s ease-in forwards;
+    }
+    .thank-you-message.show {
+      display: block;
+    }
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(10px); }
       100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOut {
+      0% { opacity: 0; }
+      20% { opacity: 1; }
+      100% { opacity: 0; transform: scale(1.05); }
     }
   </style>
 </head>
@@ -101,8 +116,7 @@
   <div class="contact-links">
     <a href="https://t.me/irisstacked" target="_blank">💬 Message me on Telegram</a>
   </div>
-  <form action="https://formsubmit.co/iriscleary23@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
+  <form id="contact-form">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required>
 
@@ -114,6 +128,8 @@
 
     <button type="submit">Send</button>
   </form>
+
+  <div id="thank-you" class="thank-you-message">✨ Message sent! I’ll be in touch soon. ✨</div>
 
   <h2>Core Strengths</h2>
   <ul>
@@ -157,6 +173,24 @@
       document.documentElement.setAttribute('data-theme', 'dark');
       toggleBtn.textContent = '☀️ Toggle Light Mode';
     }
+
+    const form = document.getElementById('contact-form');
+    const thankYou = document.getElementById('thank-you');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fetch("https://formsubmit.co/ajax/iriscleary23@gmail.com", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        })
+      })
+      .then(response => response.ok ? thankYou.classList.add('show') : alert("Error sending message."))
+      .catch(() => alert("Something went wrong."));
+      form.reset();
+    });
   </script>
 </body>
 </html>
