@@ -45,9 +45,49 @@
       cursor: pointer;
       float: right;
     }
+    form {
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: var(--bg);
+      color: var(--text);
+    }
+    button[type="submit"] {
+      background: var(--link);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    button[type="submit"]:hover {
+      transform: scale(1.05);
+    }
+    .contact-links {
+      margin-top: 1rem;
+    }
+    .contact-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
-<body>
+<body class="fade-in">
   <button id="toggle-btn">🌙 Toggle Dark Mode</button>
   <h1>Iris Emmett</h1>
   <p><strong>Remote Operations & Compliance Specialist</strong><br>
@@ -57,8 +97,23 @@
   <p>I support organizations with global operations, team structuring, and contractor compliance. My approach centers on sustainable, clear workflows that minimize liability and maximize time. With a background in logistics, insurance, and documentation, I bring sharp attention to systems that actually work—precision-focused and built for execution. I work across time zones, cultures, and currencies with ease and discretion.</p>
 
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:iriscleary23@gmail.com">iriscleary23@gmail.com</a><br>
-     LinkedIn: <a href="https://linkedin.com/in/emmettiris">linkedin.com/in/emmettiris</a></p>
+  <p>Email: <a href="mailto:iriscleary23@gmail.com">iriscleary23@gmail.com</a></p>
+  <div class="contact-links">
+    <a href="https://t.me/irisstacked" target="_blank">💬 Message me on Telegram</a>
+  </div>
+  <form action="https://formsubmit.co/iriscleary23@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
 
   <h2>Core Strengths</h2>
   <ul>
@@ -88,20 +143,6 @@
       - Directed logistics and fleet optimization, mentoring remote teams.</li>
     <li><strong>Owner & Licensed Insurance Agent – Virtual Insurance Brokers</strong> | 2019 – 2024<br>
       - Managed fully remote insurance ops, cross-state compliance, and outreach.</li>
-  </ul>
-
-  <h2>Education</h2>
-  <ul>
-    <li><strong>B.S., Supply Chain Management (In Progress)</strong><br>
-        Western Governors University | Anticipated: 2025</li>
-    <li><strong>Liberal Studies – Business Focus</strong><br>
-        Arizona State University | 2016 – 2019</li>
-  </ul>
-
-  <h2>Certifications & Licensing</h2>
-  <ul>
-    <li>Life & Health Insurance License (AZ) – Valid through Feb 2026</li>
-    <li>Property & Casualty Insurance License (AZ) – Valid through Feb 2026</li>
   </ul>
 
   <script>
