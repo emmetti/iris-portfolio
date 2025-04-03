@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="B2B Remote Infrastructure & Compliance Systems for Teams Across Borders"> 
+  <title>Iris Emmett | Remote Ops Architect for Global Teams</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #0f8b8d;
+      --alt: #f7f7f7;
+    }
+    [data-theme="dark"] {
+      --bg: #111111;
+      --text: #f1f1f1;
+      --accent: #00c6a9;
+      --alt: #1e1e1e;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: var(--text);
+    }
+    h1 span {
+      color: var(--accent);
+    }
+    .section {
+      margin-top: 2.5rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.75rem 1.2rem;
+      border-radius: 6px;
+    }
+    #toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 1px solid var(--accent);
+      padding: 0.4rem 0.8rem;
+      color: var(--accent);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggle">🌙 Toggle Mode</button>
+  <h1><span>Iris Emmett</span> – Remote Ops for Global Teams</h1>
+  <p>I help founder-led teams, remote startups, and mission-driven orgs build operational systems that scale across borders. From classification to compliance, I architect precision infrastructure that lets you grow without breaking your back end.</p>
+
+  <div class="section">
+    <h2>What I Build</h2>
+    <ul>
+      <li>🌍 Global contractor onboarding systems</li>
+      <li>📜 Async-first team policies & workflows</li>
+      <li>🔐 Risk-aware documentation & compliance structures</li>
+      <li>🛠️ Lightweight ops audits & realignment sessions</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Who's This For?</h2>
+    <p>You’re likely a startup, nonprofit, or founder managing a team that’s part global, part remote, and growing fast. You don’t need more tools — you need flow. I bring flow.</p>
+  </div>
+
+  <div class="section">
+    <h2>Next Steps</h2>
+    <p>If your operations feel like duct tape and burnout, I can help. Let's get your infrastructure aligned with your ambition.</p>
+    <a href="mailto:iriscleary23@gmail.com" class="cta">📩 Email Me</a>
+    <br /><br />
+    <a href="https://t.me/irisstacked" target="_blank" class="cta">💬 Message Me on Telegram</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      toggle.textContent = isDark ? '🌙 Toggle Mode' : '☀️ Toggle Mode';
+    });
+  </script>
+</body>
+</html>
