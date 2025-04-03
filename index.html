@@ -6,36 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Iris Emmett – Remote Ops & Compliance Specialist. Multilingual, multi-timezone, precision-focused freelance support across operations, compliance, and contractor workflows.">
   <style>
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --link: #0077cc;
+    }
+    [data-theme="dark"] {
+      --bg: #111;
+      --text: #f1f1f1;
+      --link: #66ccff;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
       max-width: 800px;
       margin: 2rem auto;
       padding: 1rem;
-      color: #111;
-      background-color: #fff;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     h1, h2 {
-      color: #222;
+      color: var(--text);
     }
     ul {
       margin-left: 1rem;
     }
     a {
-      color: #0077cc;
+      color: var(--link);
     }
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #111;
-        color: #f1f1f1;
-      }
-      a {
-        color: #66ccff;
-      }
+    #toggle-btn {
+      background: none;
+      border: 2px solid var(--link);
+      color: var(--link);
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      float: right;
     }
   </style>
 </head>
 <body>
+  <button id="toggle-btn">🌙 Toggle Dark Mode</button>
   <h1>Iris Emmett</h1>
   <p><strong>Remote Ops & Compliance Specialist</strong></p>
   <p>Multilingual. Multi-timezone. Precision-focused.</p>
@@ -78,5 +91,20 @@
 
   <h2>Contact</h2>
   <p>Email: <a href="mailto:iriscleary23@gmail.com">iriscleary23@gmail.com</a></p>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      toggleBtn.textContent = newTheme === 'dark' ? '☀️ Toggle Light Mode' : '🌙 Toggle Dark Mode';
+    });
+    // Auto-set based on system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleBtn.textContent = '☀️ Toggle Light Mode';
+    }
+  </script>
 </body>
 </html>
