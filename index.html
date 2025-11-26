@@ -1,125 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Iris Emmett – Remote Ops Specialist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Remote Operations & Compliance Specialist | Cross-Cultural, Cross-Currency | Risk-Aware, Results-Driven">
-  <style>
-    :root {
-      --bg: #fff;
-      --text: #111;
-      --link: #0077cc;
-    }
-    [data-theme="dark"] {
-      --bg: #111;
-      --text: #f1f1f1;
-      --link: #66ccff;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: var(--bg);
-      color: var(--text);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    h1, h2 {
-      color: var(--text);
-    }
-    ul {
-      margin-left: 1rem;
-    }
-    a {
-      color: var(--link);
-    }
-    #toggle-btn {
-      background: none;
-      border: 2px solid var(--link);
-      color: var(--link);
-      font-size: 0.9rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      cursor: pointer;
-      float: right;
-    }
-    .contact-links {
-      margin-top: 1rem;
-    }
-    .contact-links a {
-      display: inline-block;
-      margin-right: 1rem;
-      font-weight: bold;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmett Iris | Consulting & Professional English</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --border: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav button:hover {
+            background: var(--primary-dark);
+        }
+
+        header {
+            padding: 2.5rem 0 1.5rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--primary);
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-card li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .service-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem;
+            text-align: center;
+        }
+
+        .pricing {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .pricing h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .contact {
+            text-align: center;
+            padding: 2.5rem 0;
+            background: white;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .contact p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+
+        .contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: #dbeafe;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        #teaching-page {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body class="fade-in">
-  <button id="toggle-btn">🌙 Toggle Dark Mode</button>
-  <h1>Iris Emmett</h1>
-  <p><strong>Remote Operations & Compliance Specialist</strong><br>
-     Cross-Cultural, Cross-Currency | Risk-Aware, Results-Driven</p>
+<body>
+    <div class="nav">
+        <button id="toggle-btn">Switch to Teaching Services</button>
+    </div>
 
-  <h2>About</h2>
-  <p>I support organizations with global operations, team structuring, and contractor compliance. My approach centers on sustainable, clear workflows that minimize liability and maximize time. With a background in logistics, insurance, and documentation, I bring sharp attention to systems that actually work—precision-focused and built for execution. I work across time zones, cultures, and currencies with ease and discretion.</p>
+    <!-- Consulting Page -->
+    <div id="consulting-page" class="container">
+        <header>
+            <h1>Emmett Iris</h1>
+        </header>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:iriscleary23@gmail.com">iriscleary23@gmail.com</a></p>
-  <div class="contact-links">
-    <a href="https://t.me/irisstacked" target="_blank">💬 Message me on Telegram</a>
-    <a href="https://linkedin.com/in/emmettiris" target="_blank">🔗 Connect on LinkedIn</a>
-  </div>
+        <section class="hero">
+            <h1>Global Operations Consultant for Mission-Driven Organizations</h1>
+            <p>I support small businesses and nonprofits with precision-focused systems for remote operations, compliance, and risk-aware workflows across borders.</p>
+        </section>
 
-  <h2>Core Strengths</h2>
-  <ul>
-    <li>Remote Ops & Workflow Design</li>
-    <li>Global Compliance & Risk Mitigation</li>
-    <li>Strategic Onboarding & Process Mapping</li>
-    <li>Asynchronous Team Management</li>
-    <li>B2B Service Modeling & Contractor Structuring</li>
-    <li>Documentation & Policy Writing</li>
-  </ul>
+        <h2 class="section-title">Consulting Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h2>Remote Operations & Team Structuring</h2>
+                <ul>
+                    <li>Design sustainable remote workflows</li>
+                    <li>Develop job structures and role definitions</li>
+                    <li>Create B2B engagement models aligned with mission goals</li>
+                    <li>Optimize virtual support infrastructure for scalability</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h2>Contractor Compliance & Risk Management</h2>
+                <ul>
+                    <li>Audit and refine Standard Operating Procedures (SOPs)</li>
+                    <li>Ensure contractor classification complies with local regulations</li>
+                    <li>Build risk-aware frameworks for cross-border engagements</li>
+                    <li>Streamline onboarding for international contractors</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h2>Risk Advisory Services</h2>
+                <ul>
+                    <li>Conduct organizational risk assessments</li>
+                    <li>Design workflows that mitigate operational and compliance risks</li>
+                    <li>Provide referrals to local insurance agents and attorneys</li>
+                    <li><em>Note: Aurelia Collective LLC does not sell or solicit insurance</em></li>
+                </ul>
+            </div>
+        </div>
 
-  <h2>Freelance & Consulting Roles</h2>
-  <ul>
-    <li><strong>Principal Consultant – Aurelia Collective</strong> | Apr 2024 – Present<br>
-      - Advise mission-driven startups and nonprofits on remote operations, staffing, and risk-aware frameworks.<br>
-      - Created classification strategy, job structure, and B2B engagement model for The Dr. Annise Mabry Foundation.</li>
-    <li><strong>Remote Compliance & Ops Advisor</strong> – Ongoing Contracting<br>
-      - Audit and refine SOPs, contractor onboarding systems, and virtual support infrastructure.<br>
-      - Collaborate across borders, currencies, and regulatory environments.</li>
-  </ul>
+        <div class="pricing">
+            <h2>Pricing Approach</h2>
+            <p>We offer <span class="highlight">sliding-scale retainers</span> for small businesses and nonprofit organizations. Each retainer is priced to reflect the scope of work, and every task has its own Statement of Work (SOW). Specific SOWs may include subcontracted specialists as needed.</p>
+        </div>
 
-  <h2>Previous Employment (Highlights)</h2>
-  <ul>
-    <li><strong>Security Supervisor – Private Security Firm</strong> | Apr 2024 – Mar 2025<br>
-      - Led real-time incident response and shift coordination.</li>
-    <li><strong>Operations Manager / Dispatcher – Amazon DSP</strong> | 2022 – 2024<br>
-      - Directed logistics and fleet optimization, mentoring remote teams.</li>
-    <li><strong>Owner & Licensed Insurance Agent – Virtual Insurance Brokers</strong> | 2019 – 2024<br>
-      - Managed fully remote insurance ops, cross-state compliance, and outreach.</li>
-  </ul>
+        <div class="contact">
+            <p>Ready to streamline your operations or assess your organizational risk?</p>
+            <p>Contact us by 
+                <a href="mailto:iriscleary23@gmail.com">email</a> 
+                or 
+                <a href="https://wa.me/5491171546552">WhatsApp</a>.
+            </p>
+        </div>
 
-  <script>
-    const toggleBtn = document.getElementById('toggle-btn');
-    toggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      toggleBtn.textContent = newTheme === 'dark' ? '☀️ Toggle Light Mode' : '🌙 Toggle Dark Mode';
-    });
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      toggleBtn.textContent = '☀️ Toggle Light Mode';
-    }
-  </script>
+        <footer>
+            <p>© 2025 Emmett Iris / Aurelia Collective LLC. All consulting services provided with discretion and precision.</p>
+        </footer>
+    </div>
+
+    <!-- Teaching Page -->
+    <div id="teaching-page" class="container">
+        <header>
+            <h1>Emmett Iris</h1>
+        </header>
+
+        <section class="hero">
+            <h1>Professional English Instruction for Working Adults</h1>
+            <p>Tailored lessons focused on real-world communication, self-advocacy, and personal growth through language mastery.</p>
+        </section>
+
+        <h2 class="section-title">How It Works</h2>
+        <div class="services">
+            <div class="service-card">
+                <h2>Personalized Learning Approach</h2>
+                <ul>
+                    <li>Lessons designed around your professional goals and challenges</li>
+                    <li>Real-time and asynchronous collaboration via shared Google Docs</li>
+                    <li>Focus on patterns in communication, not just isolated errors</li>
+                    <li>Students are expected to be as engaged as the instructor</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h2>For Professionals & Leaders</h2>
+                <ul>
+                    <li>Specialize in self-advocacy and clear professional expression</li>
+                    <li>Build confidence in cross-cultural communication</li>
+                    <li>Support personal growth through language fluency</li>
+                    <li>Emphasis on practical, immediately applicable skills</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h2>Lesson Structure</h2>
+                <ul>
+                    <li>25-minute or 50-minute sessions via Google Meet</li>
+                    <li>Rolling 4-week scheduling window</li>
+                    <li>Attendance expectation: <span class="highlight">85% or higher</span></li>
+                    <li>Reschedules require 12+ hours notice within same calendar week</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pricing">
+            <h2>Investment & Commitment</h2>
+            <p>All students maintain a <span class="highlight">minimum monthly contribution of $40</span> (equivalent to 8 hours of lessons). Payment is due 48 hours in advance for standard bookings, or immediately for short-notice sessions. This ensures sustainable, high-quality instruction tailored to your evolving needs.</p>
+        </div>
+
+        <div class="contact">
+            <p>Ready to advance your professional English with a committed partner?</p>
+            <p>Contact us by 
+                <a href="mailto:iriscleary23@gmail.com">email</a> 
+                or 
+                <a href="https://wa.me/5491171546552">WhatsApp</a>.
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2025 Emmett Iris. Professional English instruction for engaged, growth-oriented professionals.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function() {
+            const consulting = document.getElementById('consulting-page');
+            const teaching = document.getElementById('teaching-page');
+            const btn = this;
+
+            if (consulting.style.display === 'none') {
+                consulting.style.display = 'block';
+                teaching.style.display = 'none';
+                btn.textContent = 'Switch to Teaching Services';
+            } else {
+                consulting.style.display = 'none';
+                teaching.style.display = 'block';
+                btn.textContent = 'Switch to Consulting Services';
+            }
+        });
+    </script>
 </body>
 </html>
+
